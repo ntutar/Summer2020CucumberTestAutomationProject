@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/vytrack/step_definitions",
-        dryRun = false
+        dryRun = false,
+        tags = "@parametrized_test"
 )
 public class CucumberRunner {
 
