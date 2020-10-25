@@ -20,3 +20,4 @@ Feature: As user I want to be able to login under different roles
   Scenario: Invalid password
     When user logs in with "storemanager85" username and "wrong" password
     Then user verifies that "Invalid user name or password." message is displayed
+
