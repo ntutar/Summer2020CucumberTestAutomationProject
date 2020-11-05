@@ -31,6 +31,12 @@ public class LoginStepDefinitions {
         Driver.closeDriver();
     }
 
+    @Then("user should see {string} page")
+    public void user_should_see_page(String string) {
+        String actual = loginPage.getPageSubTitleText().trim();
+        Assert.assertEquals("Page title is not correct!", string, actual);
+    }
+
     //When user logs in as a "driver" --> public void user_logs_in_as_a(String string) -> loginPage.login(string); -> public void login(String role) { if role == "" do this..}
     //When user logs in as a "sales manager"
     //When user logs in as a "store manager"
