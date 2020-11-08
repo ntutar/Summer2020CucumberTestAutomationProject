@@ -20,7 +20,7 @@ Feature: As user I want to be able to login under different roles
 #    When user logs in as a "sales manager"
 #    Then user should see dashboard page
 
-  @s_o
+  @s_o @smoke
   Scenario Outline: Parametrized login as <role>
     When user logs in as a "<role>"
     Then user should see dashboard page
@@ -48,7 +48,7 @@ Feature: As user I want to be able to login under different roles
 # auto-formatting on windows: control + alt + L
 #"driver" - is a parameter. "" allows to do test parametrization which helps to re-use test steps
 
-  @negative_login
+  @negative_login @smoke
   Scenario: Invalid password
     When user logs in with "storemanager85" username and "wrong" password
     Then user verifies that "Invalid user name or password." message is displayed
