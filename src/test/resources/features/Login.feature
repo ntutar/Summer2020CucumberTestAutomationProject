@@ -20,7 +20,7 @@ Feature: As user I want to be able to login under different roles
 #    When user logs in as a "sales manager"
 #    Then user should see dashboard page
 
-  @s_o @smoke
+  @s_o
   Scenario Outline: Parametrized login as <role>
     When user logs in as a "<role>"
     Then user should see dashboard page
@@ -31,7 +31,7 @@ Feature: As user I want to be able to login under different roles
       | store manager |
       | driver        |
 
-  @s_o @with_two_columns
+  @s_o @with_two_columns @smoke
   Scenario Outline: Parametrized login as <role>
     When user logs in as a "<role>"
     Then user should see "<page_title>" page
