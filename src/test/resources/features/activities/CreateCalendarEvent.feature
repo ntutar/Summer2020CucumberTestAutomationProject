@@ -1,4 +1,4 @@
-@calendar_events
+@calendar_events @smoke
 Feature: As user, I want to be able to create calendar events
 
   Scenario: Create calendar event with default time
