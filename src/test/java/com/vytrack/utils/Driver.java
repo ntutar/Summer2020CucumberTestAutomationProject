@@ -13,9 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
     private static WebDriver driver;
-
     private Driver() {}
-
     public static WebDriver getDriver() {
         if (driver == null) {
             String browser = ConfigurationReader.getProperty("browser");
@@ -33,7 +31,7 @@ public class Driver {
 //                    ChromeOptions chromeOptions = new ChromeOptions();
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
-                        URL gridUrl = new URL("http://54.91.230.15:4444/wd/hub");
+                        URL gridUrl = new URL("http://3.83.154.106:4444/wd/hub");
                         driver = new RemoteWebDriver(gridUrl, desiredCapabilities);
                     }catch (Exception e){
                         e.printStackTrace();
